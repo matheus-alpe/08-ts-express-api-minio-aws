@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "510af10e-0820-48eb-9413-e8fa00e19ea7",
+    "colId": "6095beb2-3ad3-4f11-b201-2ee9e171e620",
+    "containerId": "",
+    "name": "List Buckets",
+    "url": "{{host}}/buckets",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-10-01T02:57:40.185Z",
+    "modified": "2022-10-01T02:58:15.616Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

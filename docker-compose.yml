@@ -11,7 +11,7 @@ services:
       - ./:/08-ts-express-api-minio-aws
     environment:
       APP_NAME: Teste
-      S3_BASE_URL: 'http://127.0.0.1:9000'
+      S3_BASE_URL: 'http://172.22.0.2:9000'
       S3_KEY: 'minioadmindev'
       S3_SECRET: 'minioadmindev'
     depends_on:
@@ -28,7 +28,6 @@ services:
     - server
     - /data/minio/
     environment:
-      MINIO_DOMAIN: minio.dev.local
       MINIO_ACCESS_KEY: minioadmindev
       MINIO_SECRET_KEY: minioadmindev
 
