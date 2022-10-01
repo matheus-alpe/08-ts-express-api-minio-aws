@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  express-api-minio-aws:
+    image: node:16-alpine
+    command: sh -c "yarn && yarn dev"
+    ports:
+      - 3000:3000
+    working_dir: /08-ts-express-api-minio-aws
+    volumes:
+      - ./:/08-ts-express-api-minio-aws
+    environment:
+      APP_NAME: Teste
+      S3_BASE_URL: 'http://127.0.0.1:9000'
+      S3_KEY: 'minioadmindev'
+      S3_SECRET: 'minioadmindev'
+    depends_on:
+      - minio-aws
+  
+  minio-aws:
+    image: minio/minio:RELEASE.2021-06-07T21-40-51Z
+    volumes:
+    - ts-express-minio-data:/data
+    ports:
+    - 9090:9000
+    command:
+    - minio
+    - server
+    - /data/minio/
+    environment:
+      MINIO_DOMAIN: minio.dev.local
+      MINIO_ACCESS_KEY: minioadmindev
+      MINIO_SECRET_KEY: minioadmindev
+
+volumes:
+  ts-express-minio-data:
