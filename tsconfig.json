@@ -12,7 +12,7 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
-      "@services/*": ["src/services/*"]
+      "@s3": ["src/services/s3/index.ts"]
     }
   },
   "include": ["src/**/*"],
