@@ -12,19 +12,5 @@
     "headers": [],
     "params": [],
     "tests": []
-  },
-  {
-    "_id": "1630a1de-27a6-4765-902c-36f810eb176d",
-    "colId": "6095beb2-3ad3-4f11-b201-2ee9e171e620",
-    "containerId": "",
-    "name": "Bucket Exists",
-    "url": "{{host}}/bucket-exists",
-    "method": "GET",
-    "sortNum": 20000,
-    "created": "2022-10-03T14:55:05.239Z",
-    "modified": "2022-10-03T14:55:18.640Z",
-    "headers": [],
-    "params": [],
-    "tests": []
   }
 ]
