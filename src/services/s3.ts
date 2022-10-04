@@ -18,3 +18,12 @@ export function listS3Buckets() {
     })
   })
 }
+
+export function checkS3Bucket(bucket: string) {
+  return new Promise((resolve, reject) => {
+    s3.headBucket({ Bucket: bucket }, (err, data) => {
+      if (err) reject(err)
+      resolve(data)
+    })
+  })
+}

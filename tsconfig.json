@@ -9,11 +9,16 @@
     "strictPropertyInitialization": false,
     "strict": true,
     "skipLibCheck": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@services/*": ["src/services/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"],
   "ts-node": {
-    "files": true
+    "files": true,
+    "require": ["tsconfig-paths/register"]
   }
 }
