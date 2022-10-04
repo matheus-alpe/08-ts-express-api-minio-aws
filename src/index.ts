@@ -1,7 +1,15 @@
-import app from './app'
+import initializeExpress from './server'
+import { checkS3Bucket } from '@services/s3'
 
-const { APP_NAME } = process.env
+const { S3_BUCKET } = process.env
 
-app.listen(3000, () => {
-  console.log(`${APP_NAME} running on: http://localhost:3000`)
-})
+async function initializeServer() {
+  try {
+    await checkS3Bucket(String(S3_BUCKET))
+    initializeExpress()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+initializeServer()

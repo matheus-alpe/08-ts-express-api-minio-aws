@@ -2,7 +2,7 @@ import express from 'express'
 import morgan from 'morgan'
 import helmet from 'helmet'
 import cors from 'cors'
-import { listS3Buckets } from './s3'
+import { listS3Buckets } from '@services/s3'
 
 const app = express()
 
