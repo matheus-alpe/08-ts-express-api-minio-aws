@@ -3,7 +3,7 @@ import s3, { BUCKET_PARAMS } from './config'
 
 export function listS3Buckets() {
   return new Promise((resolve, reject) => {
-    s3.listBuckets(function (err, data) {
+    s3.listBuckets((err, data) => {
       if (err) reject(err)
       resolve(data.Buckets)
     })
