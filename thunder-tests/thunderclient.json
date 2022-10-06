@@ -12,5 +12,19 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "46198911-78c0-4686-8697-618eef001597",
+    "colId": "6095beb2-3ad3-4f11-b201-2ee9e171e620",
+    "containerId": "",
+    "name": "List Objects",
+    "url": "{{host}}/objects",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-10-04T19:56:24.962Z",
+    "modified": "2022-10-04T19:56:38.806Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
