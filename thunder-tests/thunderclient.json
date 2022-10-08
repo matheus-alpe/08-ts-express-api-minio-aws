@@ -26,5 +26,30 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "2fb090d9-56b1-4f25-9b29-664ee000db9b",
+    "colId": "6095beb2-3ad3-4f11-b201-2ee9e171e620",
+    "containerId": "",
+    "name": "Save Object",
+    "url": "{{host}}/objects",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-10-07T18:41:37.956Z",
+    "modified": "2022-10-08T00:09:13.214Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "file",
+          "value": "../../../../Downloads/discover-conectar-certificate.pdf"
+        }
+      ]
+    },
+    "tests": []
   }
 ]

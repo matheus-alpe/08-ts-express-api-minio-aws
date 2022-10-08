@@ -1,5 +1,7 @@
 import { Router } from 'express'
-import { listS3Objects } from '@s3'
+import { v4 } from 'uuid'
+import { UPLOAD } from '@multer'
+import { listS3Objects, saveObjectOnS3 } from '@s3'
 
 const route = Router()
 
@@ -8,6 +10,26 @@ route.get('/', async (req, res) => {
 
   res.json({
     objects
+  })
+})
+
+route.post('/', UPLOAD.single('file'), async (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({
+      error: 'missing file'
+    })
+  }
+
+  const { originalname, mimetype, buffer } = req.file
+
+  const object = await saveObjectOnS3({
+    Key: `${v4()}_${originalname}`,
+    Body: buffer,
+    ContentType: mimetype
+  })
+
+  res.json({
+    object
   })
 })
 

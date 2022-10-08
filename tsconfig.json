@@ -12,7 +12,8 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
-      "@s3": ["src/services/s3/index.ts"]
+      "@s3": ["src/services/s3/index.ts"],
+      "@multer": ["src/services/multer/index.ts"],
     }
   },
   "include": ["src/**/*"],
