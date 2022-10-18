@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { listS3Objects, saveObjectOnS3, ListParams } from '@s3'
+import { listS3Objects, saveObjectOnS3, ListObjectsParams } from '@s3'
 import { getFileExtension } from '@utils'
 import { v4 } from 'uuid'
 
@@ -7,7 +7,7 @@ class ObjectController {
   async list(req: Request, res: Response) {
     const { type, limit } = req.query
 
-    const params: ListParams = {}
+    const params: ListObjectsParams = {}
     if (type) params.Prefix = String(type)
     if (limit) params.MaxKeys = Number(limit)
 
