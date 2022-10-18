@@ -1,11 +1,17 @@
 import { Request, Response } from 'express'
-import { listS3Objects, saveObjectOnS3 } from '@s3'
+import { listS3Objects, saveObjectOnS3, ListParams } from '@s3'
 import { getFileExtension } from '@utils'
 import { v4 } from 'uuid'
 
 class ObjectController {
   async list(req: Request, res: Response) {
-    const objects = await listS3Objects()
+    const { type, limit } = req.query
+
+    const params: ListParams = {}
+    if (type) params.Prefix = String(type)
+    if (limit) params.MaxKeys = Number(limit)
+
+    const objects = await listS3Objects(params)
 
     res.json({
       objects

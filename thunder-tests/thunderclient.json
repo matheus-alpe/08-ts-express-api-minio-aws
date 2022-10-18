@@ -18,13 +18,24 @@
     "colId": "6095beb2-3ad3-4f11-b201-2ee9e171e620",
     "containerId": "",
     "name": "List Objects",
-    "url": "{{host}}/objects",
+    "url": "{{host}}/objects?type=png&limit=2",
     "method": "GET",
     "sortNum": 20000,
     "created": "2022-10-04T19:56:24.962Z",
-    "modified": "2022-10-04T19:56:38.806Z",
+    "modified": "2022-10-18T22:22:08.295Z",
     "headers": [],
-    "params": [],
+    "params": [
+      {
+        "name": "type",
+        "value": "png",
+        "isPath": false
+      },
+      {
+        "name": "limit",
+        "value": "2",
+        "isPath": false
+      }
+    ],
     "tests": []
   },
   {
@@ -36,7 +47,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2022-10-07T18:41:37.956Z",
-    "modified": "2022-10-08T00:09:13.214Z",
+    "modified": "2022-10-18T21:51:17.445Z",
     "headers": [],
     "params": [],
     "body": {
@@ -46,7 +57,7 @@
       "files": [
         {
           "name": "file",
-          "value": "../../../../Downloads/discover-conectar-certificate.pdf"
+          "value": "../../../../Pictures/Myself/6a63d643-fca0-4f04-b072-0ee3dfe5e6d9-profile_image-300x300.png"
         }
       ]
     },

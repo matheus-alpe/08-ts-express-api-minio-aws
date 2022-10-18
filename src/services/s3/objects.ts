@@ -1,9 +1,14 @@
 import s3, { BUCKET_PARAMS } from './config'
 import { PutObjectRequest } from 'aws-sdk/clients/s3'
 
-export function listS3Objects() {
+export interface ListParams {
+  Prefix?: string
+  MaxKeys?: number
+}
+
+export function listS3Objects(params: ListParams) {
   return new Promise((resolve, reject) => {
-    s3.listObjects(BUCKET_PARAMS, (err, data) => {
+    s3.listObjects({ ...BUCKET_PARAMS, ...params }, (err, data) => {
       if (err) reject(err)
       resolve(data.Contents)
     })
