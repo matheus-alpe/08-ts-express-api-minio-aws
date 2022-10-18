@@ -1,10 +1,10 @@
 import { Router } from 'express'
-import bucketsRoute from './buckets-route'
-import objectsRoute from './objects-route'
+import bucketRoute from './BucketRoute'
+import objectRoute from './ObjectRoute'
 
 const route = Router()
 
-route.use('/buckets', bucketsRoute)
-route.use('/objects', objectsRoute)
+route.use('/buckets', bucketRoute)
+route.use('/objects', objectRoute)
 
 export default route
