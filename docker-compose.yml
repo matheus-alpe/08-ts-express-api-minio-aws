@@ -11,7 +11,7 @@ services:
       - ./:/08-ts-express-api-minio-aws
     environment:
       APP_NAME: Teste
-      # Discover a way to endpoint not change
+      # TODO: Discover a way to endpoint not change
       S3_BASE_URL: http://172.20.0.2:9000
       S3_KEY: minioadmindev
       S3_SECRET: minioadmindev
